@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Healing Touch</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'core/Style.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/mobile-style.css' %}">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'assets/htLogo.png' %}" alt="" class="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dentalImplant.html">DENTAL IMPLANT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="treatments.html">TREATMENTS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <a href="gallery.html" class="nav-link">GALLERY</a>
+                <div class="dropdown-content">
+                  <a href="before-after.html">BEFORE & AFTER</a>
+                  <a href="our-setup.html">OUR SETUP</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog:home' %}">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-7 col-sm-12  text-white">
+          <h1>HEALING TOUCH</h1>
+          <h6>DENTAL HOSPITAL AND IMPLANT CENTRE</h6>
+          <p>
+           Una,Himachal Pradesh
+          </p>
+          <button class="btn btn-danger px-5 py-2 primary-btn">
+           Book Appointment
+          </button>
+        </div>
+        <div class="col-md-5 col-sm-12  h-25">
+         
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="{% static 'assets/OurTeam.jpg' %}" alt="" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>About Us</h1>
+              <p class="pt-4">
+                At Healing Touch Dental Hospital and Implant Centre, we provide complete dental care solutions to array of dental problems like Missing teeth with Dental Implants, Single day unbreakable complete dentures,
+                 Implant Supported full mouth prosthesis, Laser assisted periodontal surgeries, teeth whitening, Gingival depigmentation, Single sitting root canal therapy, Cosmetic Smile Design using veneers, braces, Teeth aligners
+                  and also various cosmetic and maxillofacial surgical procedures all under one roof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="overlay"></div>
+        <div class="content text-center">
+          <h1>Delivering smile with trust and excelence</h1>
+          <p>
+            Our work has resulted in over
+          </p>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rect">
+            <h1>5000</h1>
+            <p>Happy Patients</p>
+          </div>
+          <div class="rect">
+            <h1>600</h1>
+            <p>Surgeries Performed</p>
+          </div>
+          <div class="rect">
+            <h1>1000</h1>
+            <p>Implants</p>
+          </div>
+          <div class="rect">
+            <h1>100</h1>
+            <p>Success Rate</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="purchase text-center">
+        <h1>Services</h1>
+        <p>
+          What we can do for you
+        </p>
+        <div class="cards">
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Dental Implants</h5>
+                </div>
+                <p class="card-text">
+                  Dental implants are replacements for the root parts of teeth.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Dental Lasers</h5>
+                </div>
+                <p class="card-text">
+                  Laser dentistry is a minimally invasive option when you're facing gum surgery, cavity treatment, or other oral issues.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Oral & Gum Surgeries</h5>
+                </div>
+                <p class="card-text">
+                  Root planing and scaling is one of the most effective ways to treat gum disease before.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Prevental Dental Care</h5>
+                </div>
+                <p class="card-text">
+                  Preventive care can reduce costs. Day-to-day care is just as important.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Cosmetic Dentistry</h5>
+                </div>
+                <p class="card-text">
+                  Cosmetic Dentistry can make such a difference to your appearance.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">General Dentistry</h5>
+                </div>
+                <p class="card-text">
+                  Our friendly staff provides you & your family with the highest standard of dental health care.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>Dental Implants</h1>
+          <p>
+            Healing Touch Dental Hospital offers Life Time Warranty for Dental Implants from Nobel Biocare Switzerland and Biohorizons U.S.A.
+            Since 2007 Healing Touch Dental Hospital has been providing this service and till now we feel proud to tell that more than 2000 patients 
+            have been benefited with dental implants. Here is some little knowledge regarding dental implants.
+          </p>
+        </div>
+      </div>
+      <img src="{% static 'assets/PatnerBrands.jpg' %}">
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4">
+      <div class="container text-center">
+        <h1 class="text-dark">Our Team</h1>
+        <p class="text-secondary">Highly Skilled Professionals</p>
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center desktop-view">
+          <div class="card mr-2 d-inline-block shadow-lg">
+              <div class="card-img-top">
+                <img src="{% static 'assets/DrRohit.jpg' %}" class="img-fluid border-radius p-4" alt="">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Dr. Rohit Sharma</h3>
+                <p class="card-text">
+                  The founder of Healing Touch Dental Hospital, established this set up in 2005 and is in private practice since then.
+                   He did his BDS and MDS in Periodontics and Oral Implantology. He is member of Accademy of Oral Implantology & Indian Society of Periodontology. 
+                   To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology.</p>
+  
+                <a href="#" class="text-secondary text-decoration-none">Consultant Periodontist and Oral Implantologist</a>
+                <p class="text-black-50">Founder</p>
+              </div>
+            </div>
+      </div>
+       
+        <div class="col-md-4 col-12 text-center desktop-view">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="{% static 'assets/DrEeshita.jpg' %}" class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dr. Eeshita Sharma</h3>
+              <p class="card-text">
+                Complimenting her husband Dr. Rohit Sharma, she graduated (BDS) in 2004. Since then she had an opportunity to serve with a couple of army units and ECHS under Govt. of India, till 2010.
+                She did her MDS in Prosthodontics and Crown & Bridge. She also has PG Diploma in endodontics from P.G.I. Rohtak to her credit. Her main interest lies in rehabilitation of completely edentulous patients, though she handles most dental procedures equally well.
+                
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Consultant Prosthodontist</a>
+              <p class="text-black-50">Co-Founder</p>
+            </div>
+            </div>
+      </div>
+
+      <div class="col-md-4 col-12 text-center desktop-view">
+        <div class="card mr-2 d-inline-block shadow-lg">
+          <div class="card-img-top">
+            <img src="{% static 'assets/DrIsha.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Dr. Isha Sharma</h3>
+            <p class="card-text">
+              She has completed her BDS from Himachal Pradesh University and has been in private practice for a long time. A young and promising dentist who has
+               been a part of Healing Touch Dental Hospital since 2018.  She has a special interest in cosmetic dentistry which include esthetic fillings etc. and is excellent with the treatment of little kids. 
+               Her biggest strength is her constant eagerness to learn about advances in her subject of interest which translates into better patient care
+            </p>
+            <a href="#" class="text-secondary text-decoration-none">General Practitioner</a>
+
+          </div>
+          </div>
+    </div>
+
+    <div class="col-md-4 col-12 text-center desktop-view">
+      <div class="card mr-2 d-inline-block shadow-lg">
+        <div class="card-img-top">
+          <img src="{% static 'assets/DrHimanshu.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Dr. Himanshu Sharma</h3>
+          <p class="card-text">
+            Dr Himanshu Sharma has his BDS graduation from College of Dental Sciences & Hospital Davangere, Karnataka and MDS in Oral & Maxillofacial Surgery from Subharti Dental college & Hospital,Meerut,
+             UP following which he did his advanced fellowship training in  Oral & Maxillofacial Oncology & Reconstructive Surgery from Saveetha Oral Cancer Institute, Chennai, Tamil Nadu.  His area of interest are Maxillofacial trauma,  
+          </p>
+             
+             <a href="#" class="text-secondary text-decoration-none">Oral & Maxillofacial Surgery</a>
+        
+        </div>
+        </div>
+  </div>
+
+
+ <!--Carousel Starts-->    
+  <div class="col-md-12 col-12">
+    <div id="carouselExampleControls" class="carousel slide phone-view " data-ride="carousel">
+        <div class="carousel-inner text-center">
+         <div class="carousel-item active">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="{% static 'assets/DrRohit.jpg' %}" class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dr. Rohit Sharma</h3>
+              <p class="card-text">
+                The founder of Healing Touch Dental Hospital, established this set up in 2005 and is in private practice since then.
+                 He did his BDS and MDS in Periodontics and Oral Implantology. He is member of Accademy of Oral Implantology & Indian Society of Periodontology. 
+                 To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology.</p> 
+              <a href="#" class="text-secondary text-decoration-none">Consultant Periodontist and Oral Implantologist</a>
+              <p class="text-black-50">Founder</p>
+            </div>
+          </div>
+         </div>
+         <div class="carousel-item">
+           <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="{% static 'assets/DrEeshita.jpg' %}" class="img-fluid border-radius p-4" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dr. Eeshita Sharma</h3>
+              <p class="card-text">
+                Complimenting her husband Dr. Rohit Sharma, she graduated (BDS) in 2004. Since then she had an opportunity to serve with a couple of army units and ECHS under Govt. of India, till 2010.
+                She did her MDS in Prosthodontics and Crown & Bridge. She also has PG Diploma in endodontics from P.G.I. Rohtak to her credit. Her main interest lies in rehabilitation of completely edentulous patients, though she handles most dental procedures equally well.
+                She has been an active participant in the practice with her husband all these years
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Consultant Prosthodontist</a>
+              <p class="text-black-50">Co-Founder</p>
+            </div>
+          </div>
+         </div>
+          <div class="carousel-item">
+            <div class="card mr-2 d-inline-block shadow">
+              <div class="card-img-top">
+                <img src="{% static 'assets/DrIsha.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Dr. Isha Sharma</h3>
+                <p class="card-text">
+                  She has completed her BDS from Himachal Pradesh University and has been in private practice for a long time. A young and promising dentist who has
+                   been a part of Healing Touch Dental Hospital since 2018.  She has a special interest in cosmetic dentistry which include esthetic fillings etc. and is excellent with the treatment of little kids. 
+                   Her biggest strength is her constant eagerness to learn about advances in her subject of interest which translates into better patient care
+                </p>
+                <a href="#" class="text-secondary text-decoration-none">General Practitioner</a>
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card  d-inline-block mr-2 shadow">
+              <div class="card-img-top">
+                <img src="{% static 'assets/DrHimanshu.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Dr. Himanshu Sharma</h3>
+                <p class="card-text">
+                  Dr Himanshu Sharma has his BDS graduation from College of Dental Sciences & Hospital Davangere, Karnataka and MDS in Oral & Maxillofacial Surgery from Subharti Dental college & Hospital,Meerut,
+                   UP following which he did his advanced fellowship training in  Oral & Maxillofacial Oncology & Reconstructive Surgery from Saveetha Oral Cancer Institute, Chennai, Tamil Nadu.  His area of interest are Maxillofacial trauma,  
+                </p>
+                   
+                   <a href="#" class="text-secondary text-decoration-none">Oral & Maxillofacial Surgery</a>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+</div>
+
+      <!--Carousel Ends-->
+      </div>
+    </section>
+           
+  </main>
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">Locate Us</h4>
+          <p class="text-muted"><span>Healing Touch Dental Hospital and Implant Centre</span>
+             Nangal Road Una(Opp Govt. Degree College) Himachal Pradesh,
+             India-174303 Situated in the foothills of Himachal Pradesh, Una Shares its boundary with Distt. 
+            Ropar and Hoshiarpur of Punjab and situated on Chandigarh Dharamshala Highway about 120 Kms from Chandigarh.</p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-light">Subscribtion</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'main.js' %}"></script>
+</body>
+
+</html>

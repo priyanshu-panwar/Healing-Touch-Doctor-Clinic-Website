@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+{{ form.media }}
+{% endblock head %}
+
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Blog Post</legend>
+                {{ form|crispy }}
+                <small class="muted">To upload any image, <a href="https://imgbb.com/" target="_blank">click here</a> and copy the html link in the content. Servers get loaded up with images a lot Sorry.</small>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+        <p>Common Tags: 
+            {% for mt in common_tags %}
+                <a href="#" class="badge badge-success">{{mt}}</a>
+            {% endfor %}
+            </p>
+    </div>
+{% endblock content %}

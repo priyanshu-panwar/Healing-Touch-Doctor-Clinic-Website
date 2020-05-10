@@ -1,0 +1,379 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  {% if title %}
+    <title>ITALIENS - {{ title }}</title>
+  {% else %}
+    <title>ITALIENS</title>
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="ItAliens">
+<meta property="og:url" content="https://italiens.org/index.html">
+<meta property="og:site_name" content="ItAliens">
+<meta property="og:locale" content="English">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ItAliens">
+  
+    <link rel="alternate" href="/atom.xml" title="ItAliens" type="application/atom+xml">
+  
+  <link rel="icon" href="{% static 'blog/css/images/favicon.ico' %}">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+  <script src="{% static 'blog/js/jquery-3.1.1.min.js' %}"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/fashion.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/glyphs.css' %}">
+
+{% block head %}{% endblock head %}
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header Starts -->
+
+    <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ItAliens" rel="home"> ItAliens </a>             
+          </h1>
+          
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'blog:home' %}">Home</a> </li>
+            
+            {% if user.is_authenticated %}        
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'blog:post-create' %}">Create Post</a> </li>
+            
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'profile' %}">Profile</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'logout' %}">Logout</a> </li>
+            {% else %}
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'login' %}">Login</a> </li>
+                    
+<!--                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="{% url 'register' %}">Register</a> </li>-->
+            {% endif %}
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+  <!-- Header Ends -->
+
+
+    <div class="row">
+      
+      <div class="col-md-8">
+
+        <h1></h1>
+        <section id="main">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        <div class="">
+          {% block content %}{% endblock %}
+        </div>
+    </section>
+        
+      </div> <!-- col-md-8 -->
+
+      <div class="col-md-4">
+
+        <h1></h1>
+
+        <!-- search bar -->
+        <!--
+        <form method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+          <input type="text" name="tag_search" class="form-control" id="" aria-describedby="" placeholder="Enter tag to Search">
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>-->
+
+        <form>
+  <div class="form-group">
+    <input type="text" name="tag_search" class="form-control" id="" aria-describedby="" placeholder="Enter tag to search">
+  </div>
+  <button type="submit" class="btn btn-dark">Search</button>
+</form>
+
+<br>
+<!-- Social -->
+  <div class="widget-wrap">
+    <h3 class="widget-title">Connect With Us</h3>
+    <div class="widget widget_athemes_social_icons">
+
+      <ul class="clearfix widget-social-icons">   
+      
+        <li><a href="https://github.com/zimo117" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="https://www.facebook.com/ItAliens-557638164768269/?ref=br_rs" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+
+      
+      </ul>
+</div>
+</div>
+<br>
+<!--    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>Recent Posts</a></li>
+    </ul>
+    <div class="widget">
+      {% block recent_posts %}
+      {% endblock recent_posts %}
+      <!--<ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/08/12/spid/">E Tu, Hai Fatto Lo SPID?</a></h6>
+              <span>August 12, 2019</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="widget-wrap">
+    <h3 class="widget-title">Most Common Tags</h3>
+    <div class="widget">
+      {% block common_tags %}
+      {% endblock common_tags %}
+
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Burocrazia/">Burocrazia</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Expat/">Expat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Italy/">Italy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/London/">London</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+  
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Burocrazia/" style="font-size: 10px;">Burocrazia</a> <a href="/tags/Expat/" style="font-size: 10px;">Expat</a> <a href="/tags/Italy/" style="font-size: 10px;">Italy</a> <a href="/tags/London/" style="font-size: 10px;">London</a>
+    </div>
+  </div>
+  -->
+<!--
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+-->
+        
+      </div> <!-- col-md-4 -->
+
+    </div> <!-- row -->
+    
+  </div> <!-- container -->
+
+<footer id="footer" class="site-footer">
+
+  <!--<div class="widget-wrap">
+    <div class="widget widget_athemes_social_icons container">
+
+      <ul class="clearfix widget-social-icons">   
+      
+        <li><a href="https://github.com/zimo117" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="https://www.facebook.com/ItAliens-557638164768269/?ref=br_rs" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+
+      
+        <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+
+      
+      </ul>
+
+
+      
+    </div>
+  </div>
+-->
+  <div class="clearfix container">
+      <div class="site-info">
+        &copy; 2019 ItAliens All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        Developed by <a href="https://linktr.ee/_priyanshu_panwar" target="_blank">Priyanshu</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+
+</script>
+
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="{% static 'blog/fancybox/jquery.fancybox.css' %}">
+  <script src="{% static 'blog/fancybox/jquery.fancybox.pack.js' %}"></script>
+
+
+<script src="{% static 'blog/js/script.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="{% static 'blog/js/totop.js' %}" async=""></script>
+
+
+
+
+
+
+
+<script   src="http://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".content-markdown").each(function(){
+            var content = $(this).text()
+            console.log(content)
+            var markedContent = marked(content)
+            console.log(markedContent)
+            $(this).html(markedContent)
+    })
+})
+</script>
+
+<script src="/static/js/tagsinut.js"></script>
+    <script>
+    $("#post-form").submit(function(e){
+        e.preventDefault();
+        });</script>
+
+
+
+
+
+
+</body>
+</html>

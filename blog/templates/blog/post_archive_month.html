@@ -1,0 +1,25 @@
+{% extends "blog/home2.html" %}
+
+{% block content %}
+
+{% for da in date_list %}
+<p>{{ da|date:"F" }}</p>
+{% endfor %}
+
+<ul>
+    {% for article in object_list %}
+        <li>{{ article.date_posted|date:"F j, Y" }}:<a href="{% url 'blog:post-detail' article.id %}"> {{ article.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<p>
+    {% if previous_month %}
+        Previous Month: {{ previous_month|date:"F Y" }}
+    {% endif %}
+    {% if next_month %}
+        Next Month: {{ next_month|date:"F Y" }}
+    {% endif %}
+</p>
+<br><br><br>
+<br><br><br>
+{% endblock content %}

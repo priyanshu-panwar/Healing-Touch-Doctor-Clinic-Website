@@ -16,4 +16,4 @@ class PostForm(forms.ModelForm):
     content = forms.CharField(widget=AdminPagedownWidget())
     class Meta:
         model = Post
-        fields = ('title', 'content', 'tags',)
+        fields = ('title', 'title_image', 'content', 'tags',)

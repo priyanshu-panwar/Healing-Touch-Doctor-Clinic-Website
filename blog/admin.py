@@ -9,4 +9,4 @@ from .forms import PostForm
 @admin.register(Post)
 class FooModelAdmin(admin.ModelAdmin):
     form = PostForm
-    fields = ('title', 'content', 'tags',)
+    fields = ('title', 'title_image', 'content', 'tags',)

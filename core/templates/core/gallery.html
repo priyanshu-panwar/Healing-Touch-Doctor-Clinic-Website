@@ -80,10 +80,21 @@
     </div>
   </header>
   
-  {% for g in gal %}
-  <h2>Title: </h2>{{ g.title }}
-  <img src="{{ g.image1.url }}">
-  {% endfor %}
+  <main>
+       <section class="gallery-section">
+       {% for g in gal %}
+         <a href="#"> <div class="gallery-img">
+            <p class="text">{{ g.title }}</p>
+          </div>
+          <a href=""></a>
+
+       {% endfor %}
+            
+       </section>
+      </main>
+
+
+  
 
 
   <footer>

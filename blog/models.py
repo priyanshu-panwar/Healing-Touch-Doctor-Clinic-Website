@@ -7,6 +7,7 @@ from taggit.managers import TaggableManager
 
 class Post(models.Model):
 	title = models.CharField(max_length=100)
+	title_image = models.ImageField(upload_to='blog/', null=True, blank=True)
 	content = models.TextField()
 	date_posted = models.DateTimeField(default=timezone.now)
 	tags = TaggableManager()

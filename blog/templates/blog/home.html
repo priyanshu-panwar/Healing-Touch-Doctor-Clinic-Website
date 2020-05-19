@@ -11,20 +11,22 @@
 
 
   {% for post in posts %}
-  <section>
+  <section style="font-family: courier">
           <div class="row">
             <div class="leftcolumn">
               <div class="card-blog">
                
                 <img src="{{ post.title_image.url }}" alt="" id="blog-img">
-                <h4 class="blog-heading"><a href="{% url 'blog:post-detail' post.id %}">{{ post.title }}</a>
+                <h4 class="blog-heading" style="font-family: courier">{{ post.title }}
 
 </h4>
-<p>{{ post.date_posted|date:"F d, Y" }}</p>
+<!--<p>{{ post.date_posted|date:"F d, Y" }}</p>-->
   {% for tag in post.tags.all %}
-        <p class="mr-1 badge badge-info">#{{ tag }}</p>
+        <p class="mr-1 badge badge-info" style="font-family: courier">#{{ tag }}</p>
       {% endfor %}
-    
+
+<p class="blog-text" style="color: gray">{{ post.content|safe|truncatewords:"50"|linebreaks }}</p>
+<a href="{% url 'blog:post-detail' post.id %}" class="anchor-design">Read More...</a>    
 </div>
 </div>
 </div>

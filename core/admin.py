@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Gender, Patient, Appointment, Gallery
 
-admin.site.register(Gender)
+#admin.site.register(Gender)
 admin.site.register(Gallery)
 
 @admin.register(Patient)

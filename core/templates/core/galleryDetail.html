@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<main>
+<section class="beforeAfter-section">
+{% if g.image1 %}
+<img src="{{ g.image1.url }}" alt="" id="blog-img">
+{% endif %}
+            
+{% if g.image2 %}
+<img src="{{ g.image2.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image3 %}
+<img src="{{ g.image3.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image4 %}
+<img src="{{ g.image4.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image5 %}
+<img src="{{ g.image5.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image6 %}
+<img src="{{ g.image6.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image7 %}
+<img src="{{ g.image7.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image8 %}
+<img src="{{ g.image8.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image9 %}
+<img src="{{ g.image9.url }}" alt="" id="blog-img">
+{% endif %}
+{% if g.image10 %}
+<img src="{{ g.image10.url }}" alt="" id="blog-img">
+  {% endif %}
+      
+          </section>
+      </main>
+
+{% endblock content %}

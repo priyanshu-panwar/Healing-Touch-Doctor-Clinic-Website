@@ -42,11 +42,8 @@
             </li>
             <li class="nav-item dropdown">
               <div class="dropdown">
-                <a href="gallery.html" class="nav-link">GALLERY</a>
-                <div class="dropdown-content">
-                  <a href="before-after.html">BEFORE & AFTER</a>
-                  <a href="our-setup.html">OUR SETUP</a>
-                </div>
+                <a href="{% url 'core:gallery' %}" class="nav-link">GALLERY</a>
+                
               </div>
             </li>
             <li class="nav-item">
@@ -60,26 +57,11 @@
       </nav>
     </div>
   </header>
-  
-      <main>
-        {% for g in gal %}
-       <section class="gallery-section">
-       
-         <a href="{% url 'core:gallery-int' g.id %}"> 
-          <div class="gallery-img">
-          <img src="{{ g.image1.url }}" style="height: 320px; width: 320px;">
-            <p class="text">{{ g.title }}</p>
-          </div>
-    
-            
-       </section>
-       {% endfor %}
-      </main>
 
-  
+{% block content %}
+{% endblock content %}
 
-
-  <footer>
+<footer>
     <div class="container-fluid p-0">
       <div class="row text-left">
         <div class="col-md-5 col-sm-5">

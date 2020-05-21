@@ -38,3 +38,14 @@ def contact(request):
 def gallery(request):
 	gal = Gallery.objects.all()
 	return render(request, 'core/gallery.html', {'gal': gal, })
+
+
+def dentalimplant(request):
+	return render(request, 'core/dentalImplant.html')
+
+def treatments(request):
+	return render(request, 'core/treatments.html')
+
+def gallery_int(request, pk):
+	gal = Gallery.objects.get(id=pk)
+	return render(request, 'core/galleryDetail.html', {'g': gal, })

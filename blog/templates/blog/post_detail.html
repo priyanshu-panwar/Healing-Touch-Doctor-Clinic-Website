@@ -2,20 +2,20 @@
 
 {% block content %}
   
-  <section class="container" style="font-family: courier">
+  <section class="container">
           <div class="row">
             <div class="leftcolumn">
               <div class="card-blog">
                
                 <img src="{{ object.title_image.url }}" alt="" id="blog-img">
-                <h4 class="blog-heading" style="font-family: courier">{{ object.title }}
+                <h4 class="blog-heading">{{ object.title }}
 
 </h4>
-<div style="font-family: courier">
-<p style="font-family: courier"> {{ object.content|safe }}</p>
+<div>
+<p class="blog-text"> {{ object.content|safe }}</p>
 <p>{{ object.date_objected|date:"F d, Y" }}</p>
   {% for tag in object.tags.all %}
-        <p class="mr-1 badge badge-info" style="font-family: courier">#{{ tag }}</p>
+        <p class="mr-1 badge badge-info">#{{ tag }}</p>
       {% endfor %}
     </div>
 </div>

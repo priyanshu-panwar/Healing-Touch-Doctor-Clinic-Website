@@ -8,9 +8,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6t5(++r3t!(-kovi&@#*72bc35n_96v9d*(h+xx-y(d729hres'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/', 'http://htdentalimplant.com/']
+ALLOWED_HOSTS = []
 
 CLINIC_MAIL = 'priyanshu009ch@gmail.com'
 

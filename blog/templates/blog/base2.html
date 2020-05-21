@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <header style="background-image: url('{% static 'dental-health-care-website-header.jpg' %}');">
+  <header>
     <div class="container-fluid p-0">
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="{% url 'core:home' %}">
@@ -59,25 +59,7 @@
         </div>
       </nav>
     </div>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-7 col-sm-12  text-white">
-          <h1>HEALING TOUCH</h1>
-          <h6>DENTAL HOSPITAL AND IMPLANT CENTRE</h6>
-          <p>
-           Una,Himachal Pradesh
-          </p>
-          <button class="btn btn-danger px-5 py-2 primary-btn">
-            <a href="{% url 'core:appointment' %}">
-           Book Appointment
-           </a>
-          </button>
-        </div>
-        <div class="col-md-5 col-sm-12  h-25">
-         
-        </div>
-      </div>
-    </div>
+    
   </header>
   
 {% block content %}

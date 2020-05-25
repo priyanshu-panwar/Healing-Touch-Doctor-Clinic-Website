@@ -1,5 +1,4 @@
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,9 +7,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6t5(++r3t!(-kovi&@#*72bc35n_96v9d*(h+xx-y(d729hres'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 CLINIC_MAIL = 'priyanshu009ch@gmail.com'
 
@@ -130,5 +129,3 @@ MEDIA_URL = '%s/%s/' % (AWS_S3_ENDPOINT_URL, AWS_LOCATION_MEDIA)
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static',"media_root")
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-django_heroku.settings(locals())

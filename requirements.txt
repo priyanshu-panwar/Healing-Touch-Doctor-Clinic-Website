@@ -8,11 +8,14 @@ django-pagedown==2.0.3
 django-storages==1.9.1
 django-taggit==1.1.0
 docutils==0.15.2
+gunicorn==19.9.0
 jmespath==0.9.5
 Pillow==6.2.1
+psycopg2==2.8.4
 python-dateutil==2.8.1
 pytz==2019.3
 s3transfer==0.3.3
 six==1.14.0
 sqlparse==0.3.0
 urllib3==1.25.9
+whitenoise==4.1.4

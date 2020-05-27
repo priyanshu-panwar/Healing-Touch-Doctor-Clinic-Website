@@ -21,12 +21,12 @@ def appointment(request):
 			#send mail
 			subject = "Appointment"
 			message = f"New appointment: Name:{name}, contact:{contact}, address={address}."
-			send_mail(subject,
-					message,
-					EMAIL_HOST_USER,
-					[CLINIC_MAIL,],
-					fail_silently=False,
-					)
+			#send_mail(subject,
+			#		message,
+			#		EMAIL_HOST_USER,
+			#		[CLINIC_MAIL,],
+			#		fail_silently=False,
+			#		)
 			return render(request, 'core/booked.html')
 	else:
 		form = AppointmentForm()

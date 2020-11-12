@@ -12,788 +12,14 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'core/Style.css' %}" />
-  <link rel="stylesheet" href="{% static 'core/mobile-style.css' %}">
-
-  <style>
-    {% load static %}
-@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Muli:wght@800&family=Open+Sans+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-* {
-  box-sizing: border-box;
-}
-
-header,
-section {
-  overflow-x: hidden;
-}
-
-:root {
-  --Sniglet-font: "Sniglet", cursive;
-  --Rubik: "Rubik", cursive;
-  --Patua: "Patua One", cursive;
-  --Lobster: "lobster", cursive;
-  --light-black: #2e2c2caf;
-  --bggradient: linear-gradient(to bottom,  #114357, #1cefff);
-  --light-gray: rgba(255, 255, 255, 0.877);
-  --Crimson: "Crimson Text", serif;
-  --Condens: "Open Sans Condens ed", sans-serif;
-  --Muli: "Muli", sans-serif;
-  --Varela: "Varela", sans-serif;
-}
-
-header a {
-  font-family: var(--Condens);
-  font-size: 0.9em;
-  color: whitesmoke;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-
-.logo{
-  height: 2rem;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-header .nav-item:last-child {
-  padding-right: 10.5em;
-}
-
-header .nav-item {
-  padding: 0.9em;
-}
-
-header .navbar-brand {
-  padding-left: 8rem;
-}
-
-header .nav-link:hover {
-  color: black;
-}
-
-header .row .col-md-7 {
-  padding: 22vmin 1vmin;
-  padding-bottom: 35vmin;
-}
-
-header .row .col-md-5 {
-  padding: 4.2vmin 1vmin;
-}
-
-header .row .col-md-5 img {
-  width: 100%;
-  height: 100%;
-}
-
-header {
-  background: linear-gradient(123deg, rgba(49,24,131,0.4) 0%, rgba(110, 89, 216, 0.2)100%), url("{% static 'assets/dental-health-care-website-header.jpg' %}") no-repeat;
-  background-size:cover;
- 
-
-}
-
-header .container .col-md-7 {
-  font-family:var(--Muli);
-  font-weight: bolder;
-}
-
-header .container .col-md-7 h6 {
-  padding: 1vmin;
-  letter-spacing: 4px;
-}
-
-header .container .col-md-7 h1 {
-  font-size: 8.5vmin;
-  font-weight: bold;
-  padding: 0.1em 0em;
-}
-
-header .container .col-md-7 p {
-  padding: 1vmin 5vmin;
-}
-
-.primary-btn {
-  border-radius: 12px;
-  font-weight: bold;
-  opacity: .7;
-  font-family: var(--Varela);
-}
-
-/********** section 1 **************/
-
-.section-1 {
-  padding-top: 10vmin;
-  padding-bottom: 60vmin;
-}
-
-.section-1 .row .col-md-6 .pray img {
-  opacity: 0.8;
-  width: 90%;
-  border-radius: 0.2em;
-  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-}
-
-.section-1 .row .col-md-6:last-child {
-  position: relative;
-}
-
-.section-1 .row .col-md-6 .panel {
-  position: absolute;
-  top: 7vmin;
-  left: -18vmin;
-  background: white;
-  border-radius: 3px;
-  text-align: left;
-  padding: 13vmin 5vmin 20vmin 10vmin;
-  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  font-family: var(--Varela);
-  z-index: 1;
-}
-
-.section-1 .row .col-md-6 .panel h1 {
-  font-weight: bold;
-  padding: 0.4em 0;
-  font-size: 2em;
-}
-
-.section-1 .row .col-md-6 .panel p {
-  font-size: 0.9em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/*  Section 2  */
-
-.cover {
-  width: 100%;
-  height: 55vmin;
-  background: url("{% static 'assets/resultImg.jpg' %}") no-repeat;
-  background-position: -24rem -19rem;
-  background-size: 120%;
-  position: relative;
-}
-
-.cover .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-}
-
-.cover .content {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding-top: 19vmin;
-}
-
-.cover .content > h1 {
-  font-family: var(--Varela);
-  font-size: 6vmin;
-  color: whitesmoke;
-}
-
-.cover .content > p {
-  font-family: var(--Varela);
-  font-size: 2vmin;
-  color: #e5e5e5;
-}
-
-.numbers .rect {
-  position: relative;
-  z-index: 1;
-  background: white;
-  width: 17rem;
-  height: 12rem;
-  padding-top: 3.5vmin;
-  margin: 1rem;
-  border-radius: 0.5em;
-  box-shadow: 1px 2px 50px 0px rgba(18, 161, 218, 0.349);
-}
-
-.numbers {
-  margin-top: -15vmin;
-}
-
-.numbers .rect h1 {
-  font-size: 5rem;
-  color: tomato;
-}
-
-.numbers .rect > p {
-  font-family: var(--Varela);
-}
-
-.purchase > h1 {
-  padding-top: 15vmin;
-  padding-bottom: 0.1em;
-  font-family: var(--Varela);
-}
-
-.purchase > p {
-  color: var(--light-black);
-  font-size: 3vmin;
-  padding-bottom: 10vmin;
-}
-
-.purchase .cards .card {
-  width: 22rem;
-  margin: 3vmin 3vmin;
-}
-
-.cards div {
-  padding: 0;
-  margin: 0;
-}
-
-.cards .title {
-  background: rgba(208, 241, 241, 0.199);
-  padding: 1.4em 2.5em;
-  font-size: 2vmin;
-}
-
-.card .card-text {
-  padding: 2.5rem 3rem;
-  color: var(--light-black);
-}
-
-.card-body .pricing {
-  background: rgba(208, 241, 241, 0.199);
-  border-top-right-radius: 170px;
-  border-top-left-radius: 170px;
-}
-
-.card-body .pricing > h1 {
-  font-size: 10vmin;
-  padding: 1em 0.5em;
-}
-
-/* Section 3 */
-
-.section-3 {
-  height: 70vmin;
-  margin-top: 15vmin;
-  background: var(--bggradient);
-}
-
-.section-3 .col-md-12 > h1 {
-  padding: 2em 0 0.5em 0;
-  color: whitesmoke;
-  font-size: 6vmin;
-}
-
-.section-3 .col-md-12 > p {
-  padding: 0 4em;
-  padding-bottom: 2em;
-  color: var(--light-gray);
-  font-size: 3vmin;
-}
-
-
-
-
-.section-3 img{
-  width: 100%;
-}
-
-/* Section Team */
-
-.section-4 .container h1 {
-  font-size: 6vmin;
-  padding-top: 14vmin;
-}
-
-.section-4 .team {
-  padding: 10vmin 4vmin;
-}
-
-.section-4 .card {
-  width: 22em;
-  margin-top: 10vmin;
-}
-
-.section-4 .card .card-text {
-  padding: 0.5em;
-}
-
-.section-4 .card-body > a {
-  font-size: 1.5em;
-}
-
-.section-4 .carousel-item {
-  padding-left: 3rem;
-}
-
-.border-radius {
-  border-radius: 340px;
-  width: 60%;
-}
-
-/*Section Blog*/
-.post-slider{
-  border: 1px solid red;
-}
-
-.post-slider .post-wrapper{
-  width: 84%;
-  height: 350px;
-  margin: 0 auto;
-  border: 1px dashed red;
-  overflow:hidden;
-}
-
-.post-slider .post-wrapper .post{
-  width: 300px;
-  height: 350px;
-  display: inline-block;
-  background-color: aqua;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Footer Begins*/
-footer {
-  background: rgba(0, 0, 0, 0.815);
-  overflow-x: hidden;
-  padding: 14vmin 18vmin;
-}
-
-footer p > span {
-  color: #ff512f;
-}
-
-footer input {
-  border: none !important;
-}
-
-footer input::placeholder {
-  color: white !important;
-}
-
-footer .input-group .input-group-text {
-  background: var(--bggradient);
-  border: none;
-}
-
-footer .column i {
-  color: #dd2476;
-}
-
-
-footer .column i + i {
-  padding: 0 0.5em;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.815);
-  z-index: 9999;
-  transition: all 1.5s ease;
-}
-
-
-
-/*Dental Implant Section*/
-#blog-img{
- display: block;
-  width: 50%;
-  padding: 2rem;
-  margin-left: auto;
-  margin-right:auto ;
-}
-
-
-
-
-.card-blog {
-  background-color: whitesmoke;
-  padding: 20px;
-  margin: 2rem !important;
-  border-radius: .5rem;
-  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  display: block;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.blog-heading{
-  font-family: var(--Muli);
-  padding-bottom: 1rem;
-  color: var(--light-black);
-  text-align: center;
-}
-
-.blog-text{
-  font-family: var(--Varela);
-  padding-bottom: 10px;
-  color: var(--light-black);
-}
-
-.svg-size{
-  display: block;
-  margin-left: auto;
-margin-right: auto;
-width: 20% !important;
-}
-
-.anchor-design{
-  color: black;
-}
-
-
-
-
-
-.gallery-img {
-  margin: 3rem;
-  display: block;
-  position: relative;
-  margin-left: auto;
-margin-right: auto;
-width: 20rem;
-  height: 20rem;
-  cursor: pointer;
-  background:  no-repeat 100% 50%;
-  background-size: 110%;
-
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
-}
-.gallery-img:hover {
-  box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
-  background-position: 0% 50%;
-}
-.gallery-img:hover .text {
-  -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
-          transform: rotate(-45deg) translate(0px) rotate(-315deg);
-  background: rgba(102, 51, 153, 0.5);
-  width: 20rem;
-  letter-spacing: 1rem;
-  line-height: 10rem;
-  height: 20rem;
-  margin-top: -10rem;
-  margin-left: -10rem;
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-}
-.gallery-img .text {
-  display: block;
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  line-height: 4rem;
-  left: 50%;
-  top: 50%;
-  margin-top: -5rem;
-  margin-left: -5rem;
-  font-size: 2rem;
-  font-family: var(--Varela);
-  text-align: center;
-  color: #fff;
+  <link rel="stylesheet" href="{% static 'Style.css' %}" />
+  <link rel="stylesheet" href="{% static 'mobile-style.css' %}" />
+  <link rel="stylesheet" href="{% static 'all.css' %}" />
+  <link rel="stylesheet" href="{% static 'owl.theme.default.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'owl.carousel.min.css' %}" />
   
-  background: rgba(102, 51, 153, 0.493);
-  -webkit-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
-          transform: rotate(-180deg) translate(-10rem) rotate(180deg);
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-}
 
-
-.gallery-img2 {
-  margin: 3rem;
-  display: block;
-  position: relative;
-  margin-left: auto;
-margin-right: auto;
-width: 20rem;
-  height: 20rem;
-  cursor: pointer;
-  background: no-repeat 100% 50%;
-  background-size: 110%;
-
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
-}
-.gallery-img2:hover {
-  box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
-  background-position: 0% 50%;
-}
-.gallery-img2:hover .text {
-  -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
-          transform: rotate(-45deg) translate(0px) rotate(-315deg);
-  background: rgba(102, 51, 153, 0.5);
-  width: 20rem;
-  letter-spacing: 1rem;
-  line-height: 10rem;
-  height: 20rem;
-  margin-top: -10rem;
-  margin-left: -10rem;
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-}
-.gallery-img2 .text {
-  display: block;
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  line-height: 4rem;
-  left: 50%;
-  top: 50%;
-  margin-top: -5rem;
-  margin-left: -5rem;
-  font-size: 2rem;
-  font-family: var(--Varela);
-  text-align: center;
-  color: #fff;
   
-  background: rgba(102, 51, 153, 0.493);
-  -webkit-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
-          transform: rotate(-180deg) translate(-10rem) rotate(180deg);
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-}
-
-
-.beforeAfter-section{
-  display: block;
-
-  margin-left: auto;
-  margin-right: auto;
-      width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  header .navbar-brand {
-    padding-left: 1rem;
-  }
-  
-  header{
-    background: linear-gradient(123deg, rgba(49,24,131,0.4) 0%, rgba(89, 191, 216, 0.2)100%), url("{% static 'assets/BannerImage(1).jpg' %}");
-    background-size:cover ;
-  }
- 
-  .section-1{
-    padding-bottom: 20vmin;
-  }
-  
-  .section-1 .row .col-md-6 .panel {
-    position: initial;
-    width: initial;
-    height: initial;
-  }
-  
-  .section-2 .cover {
-    background-position: -25vmin -10vmin;
-  }
-  
-  .numbers .rect {
-    width: 10rem;
-    height: 8rem;
-  }
-  
-  .numbers .rect h1 {
-    font-size: 2rem;
-  }
-
-
-  .section-3 {
-    height: inherit;
-    padding: 10vmin !important;
-  }
-
-  .section-3 .row h1 {
-    padding: 6vmin 4vmin;
-  }
-
-  .section-3 .platform .col-md-6 {
-    text-align: center !important;
-  }
-
-  .section-3 .desktop i {
-    font-size: 8vmin;
-  }
-
-  .section-4 .carousel-item {
-    padding-left: 0.6rem;
-  }
-
-
-  footer .row .col-md-2 {
-    margin-top: 8vmin;
-  }
-}
-
-
-/* screen size 375px */
-
-@media only screen and (max-width: 475px) {
-  .section-4 .card {
-    width: 18em;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .section-4 .carousel-inner {
-    margin-left: -4vmin;
-  }
-}
-
-/*Cards display*/
-@media only screen and (min-width: 1200px) {
-  .phone-view{
-    display: none;
-  }
- 
-}
-
-
-@media only screen and (max-width: 1200px){
-  .desktop-view{
-    display: none;
-  }
-  
-}
-
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-
-  .svg-size{
-    width: 50% !important;
-  }
-
-}
-
-
-@media screen and (min-width: 800px) {
-  .treatment-list{
-    text-align: center;
-    list-style: none;
-  }
-
-}
-
-
-@media only screen and (max-width: 575px) {
-  .section-4 .card {
-    width: 18em;
-  }
-
-  #blog-img{
-    width: 100%;
-    padding: 2rem;
-   
-  }
-  
-  .gallery-img{
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .gallery-img .text{
-    width: 6rem;
-         height: 6rem;
-         line-height: 3rem;
-         margin-top: -3rem;
-         margin-left: -6rem;
-         font-size: 1rem;
-  }
-
-  .gallery-img:hover .text{
-         width: 10rem;
-         height: 10rem;
-         margin-top: -5rem;
-         margin-left: -5rem;
-        line-height: 4rem;
-        letter-spacing: .5rem;
-        }
-
-        .gallery-img2{
-          width: 10rem;
-          height: 10rem;
-        }
-      
-        .gallery-img2 .text{
-          width: 6rem;
-               height: 6rem;
-               line-height: 3rem;
-               margin-top: -3rem;
-               margin-left: -6rem;
-               font-size: 1rem;
-        }
-      
-        .gallery-img2:hover .text{
-               width: 10rem;
-               height: 10rem;
-               margin-top: -5rem;
-               margin-left: -5rem;
-              line-height: 4rem;
-              letter-spacing: .5rem;
-              }
-      
-}
-
-@media only screen and (min-width:995px) and ( max-width:1250px){
-  header .nav-item {
-    padding: 0.9em;
-  }
-  
-  header .navbar-brand {
-    padding-left: 2rem;
-  }
-
-  header .nav-item:last-child {
-    padding-right: 1.5em;
-  }
-  
-  
-}
-  </style>
 
 </head>
 
@@ -831,7 +57,7 @@ width: 20rem;
               <a class="nav-link" href="{% url 'blog:home' %}">BLOG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT US</a>
+              <a class="nav-link" href="{% static 'contact.html' %}">CONTACT US</a>
             </li>
           </ul>
         </div>
@@ -846,13 +72,13 @@ width: 20rem;
            Una,Himachal Pradesh
           </p>
           <button class="btn btn-danger px-5 py-2 primary-btn">
-            <a href="{% url 'core:appointment' %}">
            Book Appointment
-           </a>
           </button>
         </div>
-        <div class="col-md-5 col-sm-12  h-25">
-         
+        <div class="col-md-5 col-sm-12  h-25 contact-header">
+         <h3 >Give Us A Call At:</h3>
+         <span class="icon-large"><i class="fas fa-mobile"></i></span>
+         <p>+91-7832-074-430, +91-9418-474-430</p>
         </div>
       </div>
     </div>
@@ -863,7 +89,7 @@ width: 20rem;
         <div class="row">
           <div class="col-md-6 col-12">
             <div class="pray">
-              <img src="{% static 'assets/OurTeam.jpg' %}" alt="" class="" />
+              <img src="{% static 'assets/OurTeam.JPG' %}" alt="" class="" />
             </div>
           </div>
           <div class="col-md-6 col-12">
@@ -879,38 +105,94 @@ width: 20rem;
         </div>
       </div>
     </section>
+    
+    
     <section class="section-2 container-fluid p-0">
-      <div class="cover">
-        <div class="overlay"></div>
-        <div class="content text-center">
-          <h1>Delivering smile with trust and excelence</h1>
-          <p>
-            Our work has resulted in over
-          </p>
-        </div>
-      </div>
-      <div class="container-fluid text-center">
-        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
-          <div class="rect">
-            <h1>5000</h1>
-            <p>Happy Patients</p>
-          </div>
-          <div class="rect">
-            <h1>600</h1>
-            <p>Surgeries Performed</p>
-          </div>
-          <div class="rect">
-            <h1>1000</h1>
-            <p>Implants</p>
-          </div>
-          <div class="rect">
-            <h1>100</h1>
-            <p>Success Rate</p>
-          </div>
-        </div>
-      </div>
+       
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h1>COVID_19 Preperations</h1>
+                <p class="disclaimer">As per guidlines from Government for prevention of Covid 19, 
+                  we at Healing Touch dental Hospital are committed for safety of each and every patient. 
+                  The steps taken are as follows</p>
+                
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img has-margin-right">
+                    <img src="{% static 'assets/IMG_0493-min.JPG' %}" alt="">
+                </div>
+                <div class="portfolio-description">
+                    <h6>COVID-19 Safety Measures</h6>
+                    <h1>Entrance of the clinic with sanitizer.</h1>
+                </div>
+            </div>
+            <div class="portfolio-item">
+               
+                <div class="portfolio-description has-margin-right">
+                  <h6>COVID-19 Safety Measures</h6>
+                    <h1>Sanitization of patients belongings in UV-C Disinfection System</h1>
+                    
+                   
+                </div>
+                <div class="portfolio-img">
+                   <a href="https://www.google.co.in/maps/place/Healing+Touch+Dental+Hospital+and+Implant+Centre%7C+Best+Dentist+In+Una+Hp+%7C+Best+Dental+Surgeon+In+Una+Hp+%7C+Multispeciality+Dental+Clinic+In+Una/@31.4631989,76.2773592,17z/data=!3m1!4b1!4m5!3m4!1s0x391ad04397c0851d:0x7abfa2c4f3b5a2ec!8m2!3d31.4631989!4d76.2795479"> <img src="./assets/IMG_0495-min.JPG" alt=""></a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img has-margin-right">
+                    <img src="{% static 'assets/IMG_0497-min.JPG' %}" alt="">
+                </div>
+                <div class="portfolio-description">
+                  <h6>COVID-19 Safety Measures</h6>
+                  <h1>Patient preperation with disposable gown, head cap and shoe cover.</h1>
+                   
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-description has-margin-right">
+                  <h6>COVID-19 Safety Measures</h6>
+                    <h1>Strict social distancing norms are followed in the reception.</h1>
+                  
+                </div>
 
+                <div class="portfolio-img">
+                    <img src="{% static 'assets/reception.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="portfolio-img has-margin-right">
+                  <img src="{% static 'assets/COVID_19Prep.jpg' %}" alt="">
+              </div>
+              <div class="portfolio-description">
+                <h6>COVID-19 Safety Measures</h6>
+                  <h1>Dental Surgeon with PPE kit and autoclaved surgical gown that is changed after every patient.</h1>
+                 
+              </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-description has-margin-right">
+              <h6>COVID-19 Safety Measures</h6>
+                <h1>Isolated treatment chambers with proper hygiene and sanitization.</h1>
+            </div>
 
+            <div class="portfolio-img">
+                <img src="{% static 'assets/IMG_0546-min.JPG' %}" alt="">
+            </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right">
+              <img src="{% static 'assets/oralSuction.jpeg' %}" alt="">
+          </div>
+          <div class="portfolio-description">
+            <h6>COVID-19 Safety Measures</h6>
+              <h1>High power extra oral suction to eradicate aerosol contamination while treatment.</h1> 
+          </div>
+      </div>
+        </div>
+    </section>
+<!-- ---------------X---------- Services Details --------X------------------------------ -->
+   
       <div class="purchase text-center">
         <h1>Services</h1>
         <p>
@@ -918,6 +200,16 @@ width: 20rem;
         </p>
         <div class="cards">
           <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="card">
+              <div class="card-body">
+                <div class="title">
+                  <h5 class="card-title">Diagnostic Aids</h5>
+                </div>
+                <p class="card-text">
+                  With in house OPG machine and 3D CBCT software we are committed for accurate diagnosis and treatment planning for the patient.
+                </p>
+              </div>
+            </div>
             <div class="card">
               <div class="card-body">
                 <div class="title">
@@ -948,16 +240,7 @@ width: 20rem;
                 </p>
               </div>
             </div>
-            <div class="card">
-              <div class="card-body">
-                <div class="title">
-                  <h5 class="card-title">Prevental Dental Care</h5>
-                </div>
-                <p class="card-text">
-                  Preventive care can reduce costs. Day-to-day care is just as important.
-                </p>
-              </div>
-            </div>
+          
             <div class="card">
               <div class="card-body">
                 <div class="title">
@@ -988,14 +271,28 @@ width: 20rem;
           <h1>Dental Implants</h1>
           <p>
             Healing Touch Dental Hospital offers Life Time Warranty for Dental Implants from Nobel Biocare Switzerland and Biohorizons U.S.A.
-            Since 2007 Healing Touch Dental Hospital has been providing this service and till now we feel proud to tell that more than 2000 patients 
+            Since 2007 Healing Touch Dental Hospital has been providing this service and till now we feel proud to tell that more than 6000 patients 
             have been benefited with dental implants. Here is some little knowledge regarding dental implants.
           </p>
         </div>
       </div>
-      <img src="{% static 'assets/PatnerBrands.jpg' %}">
+      <img src="assets/PatnerBrands.jpg">
     </section>
+    <h1 class="disclaimer" style="font-size: xx-large; font-weight: bold; ">No waiting, No multiple surgeries- immediate single day loading of implants.</h1>
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>INTERNATIONAL DENTAL TOURISM CLINIC</h1>
+          <p>
+            Dentistry is unaffordable by average citizens in most parts of the world due to the expensive Dental Care Services. Dental treatment is generally not reimbursed by the National Health Schemes of some countries or the insurance is too expensive. In addition to their exorbitant dental cost is the inconvenience of having to wait for extended periods to undergo various corrective surgeries. These delays can be often detrimental to the patient’s health. In India, dental treatment is not only fast but also costs a fraction of what it costs in USA , Europe or the Arab countries.
 
+            Dental tourism is a concept put forward so that the traveler can experience and savor the natural beauty of Himachal Pradesh & Punjab while on dental treatment.
+
+          </p>
+        </div>
+      </div>
+
+    </section>
     <!-- Section 4 -->
     <section class="section-4">
       <div class="container text-center">
@@ -1013,7 +310,7 @@ width: 20rem;
                 <p class="card-text">
                   The founder of Healing Touch Dental Hospital, established this set up in 2005 and is in private practice since then.
                    He did his BDS and MDS in Periodontics and Oral Implantology. He is member of Accademy of Oral Implantology & Indian Society of Periodontology. 
-                   To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology.</p>
+                   To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology. He's also working as a Reader in Department of Periodontics at Himachal Dental College, Sundernagar (H. P.).</p>
   
                 <a href="#" class="text-secondary text-decoration-none">Consultant Periodontist and Oral Implantologist</a>
                 <p class="text-black-50">Founder</p>
@@ -1042,14 +339,14 @@ width: 20rem;
       <div class="col-md-4 col-12 text-center desktop-view">
         <div class="card mr-2 d-inline-block shadow-lg">
           <div class="card-img-top">
-            <img src="{% static 'assets/DrIsha.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+            <img src="{% static 'assets/Priyanka.jpeg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
           </div>
           <div class="card-body">
-            <h3 class="card-title">Dr. Isha Sharma</h3>
+            <h3 class="card-title">Dr. Priyanka Saini</h3>
             <p class="card-text">
-              She has completed her BDS from Himachal Pradesh University and has been in private practice for a long time. A young and promising dentist who has
-               been a part of Healing Touch Dental Hospital since 2018.  She has a special interest in cosmetic dentistry which include esthetic fillings etc. and is excellent with the treatment of little kids. 
-               Her biggest strength is her constant eagerness to learn about advances in her subject of interest which translates into better patient care
+              She has completed her BDS from Himachal Pradesh University and has been associated with Healing Touch since 2018.Diligent and enthusiastic dental professional with outstanding knowledge in 
+              performing standard as well children related dental procedures
+              .Also being a distinction holder she is utilizing her theoretical and practical experience to the fullest while dealing with patients.
             </p>
             <a href="#" class="text-secondary text-decoration-none">General Practitioner</a>
 
@@ -1090,7 +387,9 @@ width: 20rem;
               <p class="card-text">
                 The founder of Healing Touch Dental Hospital, established this set up in 2005 and is in private practice since then.
                  He did his BDS and MDS in Periodontics and Oral Implantology. He is member of Accademy of Oral Implantology & Indian Society of Periodontology. 
-                 To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology.</p> 
+                 To hone his skills he has done various advanced certificate courses in Cosmetic dentistry, Endodontics and Oral Implantology.
+                 He's also working as a Reader in Department of Periodontics at Himachal Dental College, Sundernagar (H. P.).
+                </p> 
               <a href="#" class="text-secondary text-decoration-none">Consultant Periodontist and Oral Implantologist</a>
               <p class="text-black-50">Founder</p>
             </div>
@@ -1116,14 +415,14 @@ width: 20rem;
           <div class="carousel-item">
             <div class="card mr-2 d-inline-block shadow">
               <div class="card-img-top">
-                <img src="{% static 'assets/DrIsha.jpg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
+                <img src="{% static 'assets/Priyanka.jpeg' %}" class="img-fluid rounded-circle w-50 p-4" alt="">
               </div>
               <div class="card-body">
-                <h3 class="card-title">Dr. Isha Sharma</h3>
+                <h3 class="card-title">Dr. Priyanka Saini</h3>
                 <p class="card-text">
-                  She has completed her BDS from Himachal Pradesh University and has been in private practice for a long time. A young and promising dentist who has
-                   been a part of Healing Touch Dental Hospital since 2018.  She has a special interest in cosmetic dentistry which include esthetic fillings etc. and is excellent with the treatment of little kids. 
-                   Her biggest strength is her constant eagerness to learn about advances in her subject of interest which translates into better patient care
+                  She has completed her BDS from Himachal Pradesh University and has been associated with Healing Touch since 2018.Diligent and enthusiastic dental professional with outstanding knowledge in 
+                  performing standard as well children related dental procedures
+                  .Also being a distinction holder she is utilizing her theoretical and practical experience to the fullest while dealing with patients.
                 </p>
                 <a href="#" class="text-secondary text-decoration-none">General Practitioner</a>
 
@@ -1167,7 +466,7 @@ width: 20rem;
             Ropar and Hoshiarpur of Punjab and situated on Chandigarh Dharamshala Highway about 120 Kms from Chandigarh.</p>
         </div>
         <div class="col-md-5 col-sm-12">
-          <h4 class="text-light">Subscribtion</h4>
+          <h4 class="text-light">Subscription</h4>
           <p class="text-muted">Stay Updated</p>
           <form class="form-inline">
             <div class="col pl-0">
@@ -1183,14 +482,9 @@ width: 20rem;
           </form>
         </div>
         <div class="col-md-2 col-sm-12">
-          <h4 class="text-light">Follow Us</h4>
-          <p class="text-muted">Let us be social</p>
-          <div class="column text-light">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
+          <h4 class="text-light">Designed & Developed by:</h4>
+          <p class="text-muted">Saksham Kanwar</p>
+          <p class="text-muted">Priyanshu Panwar</p>
         </div>
       </div>
     </div>

@@ -8,11 +8,118 @@
             <div class="leftcolumn">
               <div class="card-blog">
                 <h2 class="blog-heading">Dental Implant</h2>
-                <div class="blog-img" style="height:10px;">
-                 
+                <div class="blog-img" style="height:200px;">
+                  <img src="{% static 'assets/PatnerBrands.jpg' %}" id="blog-img">
                 </div>
+                
+
+
+                <div class="row">
+                  <div class="column">
+                    <img src="{% static 'assets/IMG-20200929-WA0137 (1).jpg' %}" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                  </div>
+                  <div class="column">
+                    <img src="{% static 'assets/IMG-20200929-WA0133.jpg' %}" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                  </div>
+                  <div class="column">
+                    <img src="{% static 'assets/IMG-20200929-WA0139.jpg' %}" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                  </div>
+                  <div class="column">
+                    <img src="{% static 'assets/IMG-20200929-WA0136.jpg' %}" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                  </div>
+                </div>
+                
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
+                
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-1 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0137 (1).jpg' %}" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-1 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0133.jpg' %}" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-2 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0139.jpg' %}" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-2 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0136.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-3 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0138.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-3 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0134.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-4 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0132.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-4 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20200929-WA0135.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-5 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0072.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-5 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0073.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-6 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0071.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-6 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0069.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-7 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0080.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-7 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0081.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-8 Pre-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0075.jpg' %}" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                      <div class="numbertext">Patient-8 Post-operative</div>
+                      <img src="{% static 'assets/IMG-20201002-WA0074.jpg' %}" style="width:100%">
+                    </div>
+
+                    
+
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                
+                
+                  </div>
+                </div>
+                
+               
+
+
                 <p class="blog-text">Healing Touch Dental Hospital offers Life Time Warranty for Dental Implants from Nobel Biocare Switzerland and Biohorizons U.S.A.
-                  Since 2007 Healing Touch Dental Hospital has been providing this service and till now we feel proud to tell that more than 2000 patients have been benefited with dental implants.</p>
+                  Since 2007 Healing Touch Dental Hospital has been providing this service and till now we feel proud to tell that more than 6000 patients have been benefited with dental implants.</p>
 
                   <h3 class="blog-heading">Here is some little knowledge regarding dental implants</h3>
 
@@ -23,7 +130,6 @@
                   
                   <img src="{% static 'assets/dental-impant.jpg' %}" alt="" id="blog-img">
                   <img src="{% static 'assets/dental-impant2.jpg' %}" alt="" id="blog-img">
-                  <img src="{% static 'assets/resultImg.jpg' %}" alt="" id="blog-img">
                   <h3 class="blog-heading">Why Choose
                     Healing Touch Dental Hospital and Implant Centre ?</h3>
 
@@ -41,7 +147,7 @@
                       
                       <img src="{% static 'assets/implantsvg1.png' %}" alt="" id="blog-img" class="svg-size">
                      
-                    <p class="blog-text text-center">>We make a commitment to invest in not only ourselves through continuing education, but also our practice to provide the most up-to-date equipment including 3D Implant software, Physiodispensor, Piezo Surgery Unit, Dental Laser unit exclusively for our dentists to use to ensure we are able
+                    <p class="blog-text text-center">We make a commitment to invest in not only ourselves through continuing education, but also our practice to provide the most up-to-date equipment including in-house OPG, 3D Implant software, Physiodispensor, Piezo Surgery Unit, Dental Laser unit exclusively for our dentists to use to ensure we are able
                       to provide the highest standards of clinical and patient care.</p>
 
                         <h6 class="blog-heading">Patient Care and Safety</h6>
@@ -63,6 +169,7 @@
            
           </div>
         </section>
+              
       </main>
 
 {% endblock content %}

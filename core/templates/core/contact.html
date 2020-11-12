@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Touch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style.css" />
+    <link rel="stylesheet" href="./mobile-style.css">
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+</head>
+
+<body>
+    <nav class="container-fluid navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="assets/htLogo.png" alt="" class="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://htdentalimplant.com">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://htdentalimplant.com/dentalimplant/">DENTAL IMPLANT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://htdentalimplant.com/treatments/">TREATMENTS</a>
+                </li>
+                <li class="nav-item">
+                        <a href="https://htdentalimplant.com/gallery/" class="nav-link">GALLERY</a>
+                        
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://htdentalimplant.com/blog/">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% static 'contact.html' %}">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact">
+        <div class="container">
+            <div class="row">
+                <br />
+                <h1 class="blog-heading">Contact Us:</h1>
+                <div class="col-md-6">
+                    <div class="contact-platforms" data-aos="fade-right" data-aos-delay="100">
+                        <h6>Phone: <span> +91-7832-074-430, +91-9418-474-430</span></h6>
+                        <h5>Email: <span> <a href="#">rohit@htdentalimplant.com</a></span></h5>
+                        <h5>Facebook: <span> <a href="https://www.facebook.com/htdentalimplant">Healing Touch</a></span></h5>
+                    </div>
+                </div>
+                <div class="col-md-6 overlay-x">
+                    <a href="https://www.google.co.in/maps/place/Healing+Touch+Dental+Hospital+and+Implant+Centre%7C+Best+Dentist+In+Una+Hp+%7C+Best+Dental+Surgeon+In+Una+Hp+%7C+Multispeciality+Dental+Clinic+In+Una/@31.4631989,76.2773592,17z/data=!3m1!4b1!4m5!3m4!1s0x391ad04397c0851d:0x7abfa2c4f3b5a2ec!8m2!3d31.4631989!4d76.2795479">
+                   <img src="./assets/maps.png" alt="" style="height: 50vh;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid p-0">
+            <div class="row text-left">
+                <div class="col-md-5 col-sm-5">
+                    <h4 class="text-light">Locate Us</h4>
+                    <p class="text-muted"><span>Healing Touch Dental Hospital and Implant Centre</span>
+                        Nangal Road Una(Opp Govt. Degree College) Himachal Pradesh,
+                        India-174303 Situated in the foothills of Himachal Pradesh, Una Shares its boundary with Distt.
+                        Ropar and Hoshiarpur of Punjab and situated on Chandigarh Dharamshala Highway about 120 Kms from
+                        Chandigarh.</p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <h4 class="text-light">Subscription</h4>
+                    <p class="text-muted">Stay Updated</p>
+                    <form class="form-inline">
+                        <div class="col pl-0">
+                            <div class="input-group pr-5">
+                                <input type="text" class="form-control bg-dark text-white"
+                                    id="inlineFormInputGroupUsername2" placeholder="Email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4 class="text-light">Designed & Developed by:</h4>
+                    <p class="text-muted">Saksham Kanwar</p>
+                    <p class="text-muted">Priyanshu Panwar</p>
+                  </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+   
+</body>
+
+</html>

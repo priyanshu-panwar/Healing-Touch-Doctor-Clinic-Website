@@ -1,32 +1,33 @@
 @media only screen and (max-width: 768px) {
-  header .navbar-brand {
+  .navbar .navbar-brand {
     padding-left: 1rem;
   }
-  
-  header{
-    background: linear-gradient(123deg, rgba(49,24,131,0.4) 0%, rgba(89, 191, 216, 0.2)100%), url("assets/BannerImage\(1\).jpg");
-    background-size:cover ;
+
+  header {
+    background: linear-gradient(123deg, rgba(49, 24, 131, 0.4) 0%, rgba(89, 191, 216, 0.2)100%), url("assets/our-Setup.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
- 
-  .section-1{
+
+  .section-1 {
     padding-bottom: 20vmin;
   }
-  
+
   .section-1 .row .col-md-6 .panel {
     position: initial;
     width: initial;
     height: initial;
   }
-  
+
   .section-2 .cover {
     background-position: -25vmin -10vmin;
   }
-  
+
   .numbers .rect {
     width: 10rem;
     height: 8rem;
   }
-  
+
   .numbers .rect h1 {
     font-size: 2rem;
   }
@@ -76,27 +77,49 @@
 
 /*Cards display*/
 @media only screen and (min-width: 1200px) {
-  .phone-view{
+  .phone-view {
     display: none;
   }
- 
+
 }
 
 
-@media only screen and (max-width: 1200px){
-  .desktop-view{
+@media only screen and (max-width: 1200px) {
+  .desktop-view {
     display: none;
   }
-  
+
+  .portfolio-item {
+    flex-direction: column;
+  }
+
+  .portfolio-img {
+    margin: 1rem 1rem 1rem 1rem;
+    order: 1;
+  }
+
+  .portfolio-description {
+    margin: 0;
+    order: 2;
+  }
+  .portfolio-item img{
+    margin-top: 4rem;
+    height: 25rem;
+    width: 35rem;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
+  
+ 
 
-  .svg-size{
+  section .purchase{
+    margin-top: 15rem;
+  }
+   
+
+  .svg-size {
     width: 50% !important;
   }
 
@@ -104,85 +127,113 @@
 
 
 @media screen and (min-width: 800px) {
-  .treatment-list{
+  .treatment-list {
     text-align: center;
     list-style: none;
   }
+  header .contact-header{
+    display: none;
+  }
+
+  .contact-header h1{
+    color: crimson;
+  }
+
+  
 
 }
 
 
 @media only screen and (max-width: 575px) {
+
+ 
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
   .section-4 .card {
     width: 18em;
   }
 
-  #blog-img{
+  #blog-img {
     width: 100%;
     padding: 2rem;
-   
+
   }
-  
-  .gallery-img{
+  .blog-content img{
+    max-height: 70vh;
+  }
+  .blog-heading{
+    font-size: 1.5rem;
+    
+  }
+
+  main .blog{
+    height: 100vh;
+}
+
+  .gallery-img {
     width: 10rem;
     height: 10rem;
   }
 
-  .gallery-img .text{
+  .gallery-img .text {
     width: 6rem;
-         height: 6rem;
-         line-height: 3rem;
-         margin-top: -3rem;
-         margin-left: -6rem;
-         font-size: 1rem;
+    height: 6rem;
+    line-height: 3rem;
+    margin-top: -3rem;
+    margin-left: -6rem;
+    font-size: 1rem;
   }
 
-  .gallery-img:hover .text{
-         width: 10rem;
-         height: 10rem;
-         margin-top: -5rem;
-         margin-left: -5rem;
-        line-height: 4rem;
-        letter-spacing: .5rem;
-        }
+  .gallery-img:hover .text {
+    width: 10rem;
+    height: 10rem;
+    margin-top: -5rem;
+    margin-left: -5rem;
+    line-height: 4rem;
+    letter-spacing: .5rem;
+  }
 
-        .gallery-img2{
-          width: 10rem;
-          height: 10rem;
-        }
-      
-        .gallery-img2 .text{
-          width: 6rem;
-               height: 6rem;
-               line-height: 3rem;
-               margin-top: -3rem;
-               margin-left: -6rem;
-               font-size: 1rem;
-        }
-      
-        .gallery-img2:hover .text{
-               width: 10rem;
-               height: 10rem;
-               margin-top: -5rem;
-               margin-left: -5rem;
-              line-height: 4rem;
-              letter-spacing: .5rem;
-              }
-      
+  .gallery-img2 {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .gallery-img2 .text {
+    width: 6rem;
+    height: 6rem;
+    line-height: 3rem;
+    margin-top: -3rem;
+    margin-left: -6rem;
+    font-size: 1rem;
+  }
+
+  .gallery-img2:hover .text {
+    width: 10rem;
+    height: 10rem;
+    margin-top: -5rem;
+    margin-left: -5rem;
+    line-height: 4rem;
+    letter-spacing: .5rem;
+  }
+
 }
 
-@media only screen and (min-width:995px) and ( max-width:1250px){
-  header .nav-item {
+@media only screen and (min-width:995px) and (max-width:1250px) {
+  .navbar .nav-item {
     padding: 0.9em;
   }
-  
-  header .navbar-brand {
+
+  .navbar .navbar-brand {
     padding-left: 2rem;
   }
 
-  header .nav-item:last-child {
+  .navbar .nav-item:last-child {
     padding-right: 1.5em;
   }
-  
-  
+
+
+
 }

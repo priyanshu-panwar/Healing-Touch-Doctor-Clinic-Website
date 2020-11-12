@@ -1,3 +1,4 @@
+
 let nCount = selector => {
   $(selector).each(function () {
     $(this)
@@ -37,27 +38,3 @@ $(window).scroll(function () {
  *  sticky navigation
  *
  */
-
-let navbar = $(".navbar");
-
-$(window).scroll(function () {
-  // get the complete hight of window
-  let oTop = $(".section-2").offset().top - window.innerHeight;
-  if ($(window).scrollTop() > oTop) {
-    navbar.addClass("sticky");
-  } else {
-    navbar.removeClass("sticky");
-  }
-});
-
-/* Slick Js for carousel */
-
-$(document).ready(function(){
-  
-$(".post-wrapper").slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 10,
-});
-});
